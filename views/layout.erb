@@ -17,30 +17,20 @@
     <div class="sticky-top">
 
       <!-- Naviation menu, brand and links -->
-      <ul class="nav menu">
+      <nav class="nav menu">
         <a class="navbar-brand" href="/<%= session[:username] %>">
           <img src="/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
           <%= session[:username] %>
         </a>
         <% if session[:username] %>
-          <li class="nav-item button">
-            <a class="nav-link" href="/logout">Log Out</a>
-          </li>
-          <li class="nav-item button">
-            <a class="nav-link" href="/<%= session[:username] %>/new">New plant</a>
-          </li>
+            <a class="nav-link button" href="/logout">Log Out</a>
+            <a class="nav-link button" href="/<%= session[:username] %>/new">New plant</a>
         <% else %>
-          <li class="nav-item button">
-            <a class="nav-link" href="/login">Log In</a>
-          </li>
-          <li class="nav-item button">
-            <a class="nav-link" href="/signup">Sign Up</a>
-          </li>
+            <a class="nav-link button" href="/login">Log In</a>
+            <a class="nav-link button" href="/signup">Sign Up</a>
         <% end %>
-        <li class="nav-item button">
-          <a class="nav-link" href="/home">Home</a>
-        </li>
-      </ul>
+          <a class="nav-link button" href="/home">Home</a>
+      </nav>
     </div>
 
     <% if session[:message] %>
