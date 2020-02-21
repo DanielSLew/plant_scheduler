@@ -110,6 +110,7 @@ end
 
 # Returns nil if it can't match a an image in the URL, modifies the image_url to only contain the image if match
 def format_image_url(image_url)
+  return image_url if image_url =~ /postimg.cc/
   image_url.sub!(/((.*\.(jpg|jpeg|gif|png)).*)/, '\2') || image_url.empty?
 end
 
