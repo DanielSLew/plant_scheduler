@@ -1,0 +1,53 @@
+<!-- Bootstrap flexbox container wrapper -->
+<div class="d-flex justify-content-center bottom-green-border">
+
+  <!--  Edit plant form -->
+  <form action="/<%= @username %>/<%= @plant_id %>/edit" id="edit_plant" method="post">
+    <div class="form-group row">
+      <label for="type" class="col-form-label col-form-label-sm">Type of Plant:
+        <div class="col-sm-10">
+          <input name="type" id="type" value="<%= @type %>">
+        </div>
+      </label>
+    </div>
+    <div class="form-group row">
+      <label for="photo" class="col-form-label col-form-label-sm">Add new photo of plant 
+        <a href="https://tinyjpg.com/" target="_blank"> (Click here if you need to upload your image)</a>:
+        <div class="col-sm-10">
+          <input name="photo" id="photo" value="<%= @photo %>">
+        </div>
+      </label>
+    </div>
+    <div class="form-group row">
+      <label for="schedule" class="col-form-label col-form-label-sm">How many times a week does it need watering?:
+        <div class="col-sm-10">
+          <input name="schedule" id="schedule" value="<%= @schedule %>">
+        </div>
+      </label>
+    </div>
+
+    <!--  Disabled last water field -->
+    <fieldset disabled>
+      <div class="form-group row">
+        <label for="last_water" class="col-form-label col-form-label-sm">Last water:
+          <div class="col-sm-10">
+            <input name="last_water" id="last_water" placeholder="<%= @last_water.max.strftime("%b %d") %>" value=''>
+          </div>
+        </label>
+      </div>
+    </fieldset>
+    <!--  -->
+
+    <div class="form-group row">
+      <label for="notes" class="col-form-label col-form-label-sm">Any additional notes (Location, etc.):
+        <div class="col-sm-10">
+          <input name="notes" id="notes" value="<%= @notes %>">
+        </div>
+      </label>
+    </div>
+
+    <!--  Submit and cancel buttons for edit plant -->
+    <button type="Submit" class="btn btn-outline-success">Submit Changes</button>
+    <a class="btn btn-outline-danger" href="/<%= @username %>">Cancel</a>
+  </form>
+</div>

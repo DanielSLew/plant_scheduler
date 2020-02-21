@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Bootstrap for mobile first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Plant Scheduler</title>
+
+    <!-- Bootstrap and application stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/plant_schedule.css">
+  </head>
+  <body>
+
+    <!-- Navigation fixed to the top -->
+    <div class="sticky-top">
+
+      <!-- Naviation menu, brand and links -->
+      <ul class="nav menu">
+        <a class="navbar-brand" href="/<%= session[:username] %>">
+          <img src="/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          <%= session[:username] %>
+        </a>
+        <% if session[:username] %>
+          <li class="nav-item button">
+            <a class="nav-link" href="/logout">Log Out</a>
+          </li>
+          <li class="nav-item button">
+            <a class="nav-link" href="/<%= session[:username] %>/new">New plant</a>
+          </li>
+        <% else %>
+          <li class="nav-item button">
+            <a class="nav-link" href="/login">Log In</a>
+          </li>
+          <li class="nav-item button">
+            <a class="nav-link" href="/signup">Sign Up</a>
+          </li>
+        <% end %>
+        <li class="nav-item button">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
+      </ul>
+    </div>
+
+    <% if session[:message] %>
+      <div class="flash-message">
+        <p><%= session.delete(:message) %></p>
+      </div>
+    <% end %>
+
+    <!-- Page Content -->
+    <%== yield %>
+
+    <!--  JQuery, Popper.js, and Bootstrap JavaScript plugins -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+
+  <!-- Footer -->
+  <footer>
+    <div class="small footer text-muted">
+      © <a href="https://github.com/DanielSLew/">Daniel Lew</a> 2020<br>
+      Images Courtesy of <a href="https://pngtree.com/" alt="PNG Tree">PNG Tree</a>
+    </div>
+  </footer>
+</html>

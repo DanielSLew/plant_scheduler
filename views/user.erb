@@ -1,0 +1,56 @@
+<br>
+
+<!-- Message reporting number of plants a user has -->
+<p class="text-center">
+  <% if current_user %>
+    <%= user_num_of_plants %>
+  <% else %>
+    <%= @username + num_of_plants %>
+<% end %></p>
+
+<!-- Display photo for users with no plants -->
+<% if @plants.empty? %>
+  <img class="img-fluid" src="/sad-plant.png" alt="sad plant">
+<% end %>
+
+<!--  Accordion wrapper -->
+<div class="accordion-group w-50 center-block" id="accordion" aria-multiselectable="true">
+
+  <!-- Dynamically created card header for plant --->
+  <% @plants.each do |id, plant| %>
+    <% state = state_of_plant(plant) %>
+    <div class="card">
+      <div class="card-header plant-info <%= state %>" id="heading<%= id %>">   
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseInfo<%= id %>" aria-expanded="false" aria-controls="collapseInfo<%= id %>">
+          <h1 class="plant-title text-center"><%= plant['type'] %></h1>
+          <img class="card-img text-center" src="<%= plant['photo'] %>" alt="Photo url not working (edit to fix)">
+        </button>
+      </div>
+
+      <!--  Dynamically created card body wrapper for plant info -->
+      <div class="card-body inline plant-info <%= state %> text-center">
+        <div id="collapseInfo<%= id %>" class="collapse" aria-labelledby="heading<%= id %>" data-parent="#accordion">
+
+          <!-- Plant info Content-->
+          <p class="card-text">Water <%= plural_count(plant['schedule'], 'time') %> a week</p>
+          <p>Last watered on <%= last_water_date(plant) %></p>
+          <p>Watered <%= plural_count(watering_count(plant), 'time') %> this week</p>
+          <p>Notes: <%= plant['notes'] %></p>
+
+          <% if current_user %>
+            <form action="/<%= @username %>/<%= id %>/water" method="post">
+              <button class="plant-water" type="submit"></button>
+            </form>
+            <br>
+            <form class="inline" action="/<%= @username %>/<%= id %>/edit" method="get">
+              <button class="edit-icon float-right" type="submit"></button>
+            </form>
+            <form action="/<%= @username %>/<%= id %>/delete" method="post">
+              <button class="trash-can float-left" type="submit"></button>
+            </form>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

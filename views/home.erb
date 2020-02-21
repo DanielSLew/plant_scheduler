@@ -1,0 +1,14 @@
+<p class="text-center bottom-green-border"> 
+  Welcome to the Plant Water Scheduler<br>
+  Feel free to browse through and look at everyone's plants 
+</p>
+
+<!-- List of users -->
+<ul class="list-group" id="users">
+  <p class="text-center"> People currently growing a family:</p>
+  <% @users.each do |user| %>
+    <li class="list-group-item list-group-item-action list-group-item-success text-center">
+      <a href="/<%= user %>"><%= user %></a>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,31 @@
+<!-- Bootstrap flexbox container wrapper -->
+<div class="d-flex justify-content-center bottom-green-border">
+  
+  <!--  Credentials Form for signing up -->
+  <form style="credentials-form" action="/signup" method="post">
+    <div class="form-group row">
+      <label for="username" class="col-sm-2 col-form-label col-form-label-sm">Username:
+        <div class="col-sm-10">
+        <input name="username" id="username" value="<%= params[:username] %>"/>
+      </div>
+      </label>
+    </div>
+    <div class="form-group row">
+      <label for="password" class="col-sm-2 col-form-label col-form-label-sm">Password:
+        <div class="col-sm-10">
+          <input type="password" id="password" name="password" />
+        </div>
+      </label>
+    </div>
+    <div class="form-group row">
+      <label for="password_confirm" class="col-xl-2 col-form-label col-form-label-sm">Confirm Password:
+        <div class="col-sm-10">
+          <input type="password" id="password_confirm" name="password_confirm">
+        </div>
+      </label>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-outline-success" type="Submit">Sign Up</button>
+    </div>
+  </form>
+</div>

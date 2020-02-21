@@ -1,0 +1,31 @@
+---
+jen: !ruby/string:BCrypt::Password
+  str: "$2a$12$QmjCsA/OIpY.yOngCwmWIO7SMzhqx9gIzo0ySq6XF10hQlniyWbIK"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$QmjCsA/OIpY.yOngCwmWIO"
+  checksum: 7SMzhqx9gIzo0ySq6XF10hQlniyWbIK
+daniel: !ruby/string:BCrypt::Password
+  str: "$2a$12$eVFboMWfee9w6WwOP7ItnOi/HMN8ENBCijfZNspTHFLl1eBY9VZWu"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$eVFboMWfee9w6WwOP7ItnO"
+  checksum: i/HMN8ENBCijfZNspTHFLl1eBY9VZWu
+jack: !ruby/string:BCrypt::Password
+  str: "$2a$12$2qJvjZKhJqeCGb3HGuC7z./eFEfYoRI0kn9fdxLrHRlKGa/sh9xaW"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$2qJvjZKhJqeCGb3HGuC7z."
+  checksum: "/eFEfYoRI0kn9fdxLrHRlKGa/sh9xaW"
+jacob: !ruby/string:BCrypt::Password
+  str: "$2a$12$aMMRk5INntRq8Z9oklwm1e1MRvCAI1XuAz8Bb6TbYqTmz1u6k1C7W"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$aMMRk5INntRq8Z9oklwm1e"
+  checksum: 1MRvCAI1XuAz8Bb6TbYqTmz1u6k1C7W
+bob: !ruby/string:BCrypt::Password
+  str: "$2a$12$0XOd89uonK6sSDXVsFud/.2kJUI7MVHUifq3VfPS35tO80eMBRPsC"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$0XOd89uonK6sSDXVsFud/."
+  checksum: 2kJUI7MVHUifq3VfPS35tO80eMBRPsC

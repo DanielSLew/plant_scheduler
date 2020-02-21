@@ -1,0 +1,26 @@
+<!-- Bootstrap Flexbox container wrapper -->
+<div class="d-flex justify-content-center bottom-green-border">
+
+  <!-- Signin Form -->
+  <form action="/signin" method="post">
+    <div class="form-group row">
+      <label for="username" class="col-sm-2 col-form-label col-form-label-sm">Username:
+        <div class="col-sm-10">
+        <input name="username" id="username" value="<%= params[:username] %>"/>
+      </div>
+      </label>
+    </div>
+    <div class="form-group row">
+      <label for="password" class="col-sm-2 col-form-label col-form-label-sm">Password:
+        <div class="col-sm-10">
+          <input type="password" id="password" name="password" />
+        </div>
+      </label>
+    </div>
+    <div class="text-center">
+      
+      <!-- Submit signin form -->
+      <button type="submit" class="btn btn-outline-success" type="Submit">Sign In</button>
+    </div>
+  </form>
+</div>

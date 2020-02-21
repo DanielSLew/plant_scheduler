@@ -1,0 +1,108 @@
+/*Layout*/
+  body {
+    font-family: "Arial";
+    background-color: #EFFFF7;
+  }
+
+  .flash-message {
+    background: #FFFF99;
+    font-style: italic;
+  }
+
+  .footer {
+  padding: 10px;
+  }
+/**/
+
+/*Navigation menu*/
+  .button {
+    transition-duration: 0.4s;
+  }
+
+  .button:hover {
+    background-color: #BDFCCC;
+    color: white;
+  }
+
+  .menu {
+    background-color: #82FF76;
+    border-width: 2px;
+    border-bottom: solid;
+    border-color: #008842;
+  }
+
+  .center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+/**/
+
+/*Plant card styling*/
+  .plant-title {
+    color: #39CF2E;
+    font-family: "Marker Felt"
+  }
+
+  .plant-info {
+    padding: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #008842;
+  }
+
+  .unfinished {
+    background-color: #C5FFBF;
+  }
+
+  .finished {
+    background-color: #FB9D8A;
+  }
+/**/
+
+/*Button Icons*/
+  .edit-icon {
+    background-image: url(/edit-icon.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* put the height and width of your image here */
+    height: 40px;
+    width: 40px;
+    border: none;
+  }
+
+  .plant-water {
+    background-image: url(/watering-can.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* put the height and width of your image here */
+    height: 78px;
+    width: 78px;
+    border: none;
+  }
+
+  .trash-can {
+    background-image: url(/trash-can.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* put the height and width of your image here */
+    height: 40px;
+    width: 40px;
+    border: none;
+  }
+/**/
+
+/*Generic styling*/
+  .bottom-green-border {
+    border-width: 2px;
+    border-bottom: solid;
+    border-color: #008842;
+  }
+
+  .inline {
+    display: inline;
+  }
+/**/
