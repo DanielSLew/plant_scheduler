@@ -31,7 +31,7 @@ end
 
 # Returns a hash of users => plants
 def load_plants_file
-  YAML.load_file(File.join(data_path, "plants.yml"))
+  YAML.load_file(File.join(data_path, "plants.yml")) || {}
 end
 
 # Updates the plant file
