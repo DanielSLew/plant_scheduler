@@ -1,4 +1,4 @@
-#Plant Water Scheduler
+# Plant Water Scheduler
 
 Welcome to the plant water scheduler, I created this project for Launch School's RB 175 course.
 
@@ -12,6 +12,6 @@ The plants that still need water, will be presented at the top of the page and d
 
 It will help you take care of your plants, as well as being able to view other user's plant collections.
 
-**Caveat**
+## Caveat
 
 Because of Heroku's ephemeral filesystem, the information from this app will be reset every time the dyno is stopped or restarted. So this project is more used as a presentation of concepts I've practiced, as well as a way to cement new concepts.
